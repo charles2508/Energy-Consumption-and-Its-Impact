@@ -1,0 +1,8 @@
+Meeting note:
+
+- discuss about what is the project scope (is it only for the company to manage its member or it needs another interface for members to interact with the company's software)
+=> only for company to manage its members
+
+-Complete group project scope and product backlog
+
+- product backlog needs to be more specific so we can finish it in 2 weeks
