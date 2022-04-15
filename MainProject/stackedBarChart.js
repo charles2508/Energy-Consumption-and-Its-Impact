@@ -1,4 +1,4 @@
-function init() { 
+
     d3.csv("data/energy_per_sector.csv").then(function(data) {
       data.forEach(function(d) {
         d['services sector'] = +d['services sector'];
@@ -7,16 +7,16 @@ function init() {
       });
       energyPerSector = data;
       console.log(energyPerSector);
-
-      d3.select('#TotalB')
-            .on('click',() => {
-                RemoveBarChart();
-                stackedBarChart(energyPerSector);
-            }) 
+      DisplayBarchart();
+      stackedBarChart(energyPerSector);
     });
-}
+
   
 function stackedBarChart(energyPerSector) {
+  d3.select('#TotalB')
+            .on('click',() => {
+                DisplayStackedBarchart();
+            }) 
     var energyTypes = energyPerSector.map(function(d) {
       return d.Name;
     });
@@ -42,7 +42,7 @@ function stackedBarChart(energyPerSector) {
                     .domain(sectors)
                     .range(["#d62728", "#2ca02c", "#9467bd"]);
 
-    var svg = d3.select('#barchart')
+    var svg = d3.select('#stackedBarChart')
                 .append("svg")
                 .attr('id', 'stackedBar')
                 .attr('width', width)
@@ -86,6 +86,13 @@ function stackedBarChart(energyPerSector) {
       .transition().duration(1000)
       .attr('height', (d) => yScale(d[0]) - yScale(d[1]))
       .attr('width', xScale.bandwidth());
-}
-  
-window.onload = init;
+    
+  }
+
+  function DisplayStackedBarchart()
+  {
+      var chart = document.getElementById("barchart");
+      var stackedBarChart = document.getElementById("stackedBarChart");
+      chart.style.display = "none";
+      stackedBarChart.style.display = "block";
+  };
