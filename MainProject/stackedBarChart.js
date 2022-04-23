@@ -6,7 +6,7 @@
         d['agriculture sector'] = +d['agriculture sector'];
       });
       energyPerSector = data;
-      console.log(energyPerSector);
+      // console.log(energyPerSector);
       DisplayBarchart();
       stackedBarChart(energyPerSector);
     });
@@ -20,7 +20,7 @@ function stackedBarChart(energyPerSector) {
     var energyTypes = energyPerSector.map(function(d) {
       return d.Name;
     });
-    console.log(energyTypes);
+    // console.log(energyTypes);
     var sectors = ["services sector","residential sector","agriculture sector"];
     var totalUsage = energyPerSector.map(function(energy){
       var sumUsage = 0;
@@ -29,12 +29,13 @@ function stackedBarChart(energyPerSector) {
       })
       return sumUsage;
     });
-    console.log(totalUsage)
+    // console.log(totalUsage)
     const xValue = d => d.Name;
     const xScale = d3.scaleBand()
                       .domain(energyPerSector.map(xValue))
                       .range([0, innerWidth])
                       .padding(0.3);
+    // console.log(energyPerSector.map(xValue));
     var yScale = d3.scaleLinear()
                     .domain([0, d3.max(totalUsage)])
                     .range([innerHeight,margin.top]); //40393
@@ -63,8 +64,8 @@ function stackedBarChart(energyPerSector) {
                   .keys(sectors)
                   .order(d3.stackOrderDescending);
     var stacked = stack(energyPerSector);
-    console.log(stacked);
-    console.log(stacked[1]);
+    // console.log(stacked);
+    // console.log(stacked[1]);
 
     g.append("circle").attr("cx",innerWidth - 110).attr("cy",150).attr("r", 6).style("fill", "#d62728");
     g.append("circle").attr("cx",innerWidth - 110).attr("cy",180).attr("r", 6).style("fill", "#2ca02c");

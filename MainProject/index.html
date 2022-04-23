@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>COS30045 - Data Visualization</h1>
-    <div class="Energy per sector">
+    <div class="Energy_per_sector">
         <h2>World Energy Demand in 2014</h2>
         <p>
             <button type="button" id="servicesB">Services Sector</button>
@@ -24,9 +24,24 @@
         <script src="BarChart.js"></script>
         <script src="stackedBarChart.js"></script>
     </div>
-    <div id="WorldMap"></div>
+    <div class="Energy_per_region">
+        <button id = "year2016">2016</button>
+        <button id = "year2017">2017</button>
+        <button id = "year2018">2018</button>
+        <p id="Choropleth"></p>
+        <script src="Choropleth.js"></script>
+    </div>
     <script></script>
-    <div id="LineChart"></div>
+    <div class="Impact_on_Environment">
+        <h2>Impact on Environment</h2>
+        <p>
+            <button type="button" id="coal">Coal</button>
+            <button type="button" id="gas">gas</button>
+        </p>
+        <p id="LineChart"></p>
+        <script src="EnvImpact.js"></script>
+        <p id="explanation"></p>
+    </div>
     <script></script>
     <footer>
         <p>COS30045 Data Visualization</p>
