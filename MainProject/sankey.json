@@ -1,0 +1,70 @@
+{
+    "links": [
+    {"source":"Total Consumption","target":"Coal, peat and oil shale","value":"39786"},
+    {"source":"Total Consumption","target":"Crude, NGL and feedstocks","value":"599"},
+    {"source":"Total Consumption","target":"Oil products","value":"168375"},
+    {"source":"Total Consumption","target":"Natural gas","value":"68405"},
+    {"source":"Total Consumption","target":"Renewables and waste","value":"45733"},
+    {"source":"Total Consumption","target":"Electricity","value":"82252"},
+    {"source":"Total Consumption","target":"Heat","value":"12823"},
+
+    {"source":"Coal, peat and oil shale","target":"Industry","value":"32571"},
+    {"source":"Coal, peat and oil shale","target":"Transport","value":"40"},
+    {"source":"Coal, peat and oil shale","target":"Residential","value":"2530"},
+    {"source":"Coal, peat and oil shale","target":"Commercial and public services","value":"1115"},
+    {"source":"Coal, peat and oil shale","target":"Other","value":"3529"},
+
+    {"source":"Crude, NGL and feedstocks","target":"Industry","value":"65"},
+    {"source":"Crude, NGL and feedstocks","target":"Transport","value":"0"},
+    {"source":"Crude, NGL and feedstocks","target":"Residential","value":"0"},
+    {"source":"Crude, NGL and feedstocks","target":"Commercial and public services","value":"0"},
+    {"source":"Crude, NGL and feedstocks","target":"Other","value":"534"},
+
+    {"source":"Natural gas","target":"Industry","value":"25700"},
+    {"source":"Natural gas","target":"Transport","value":"4963"},
+    {"source":"Natural gas","target":"Residential","value":"20286"},
+    {"source":"Natural gas","target":"Commercial and public services","value":"8723"},
+    {"source":"Natural gas","target":"Other","value":"8734"},
+
+    {"source":"Renewables and waste","target":"Industry","value":"9930"},
+    {"source":"Renewables and waste","target":"Transport","value":"3987"},
+    {"source":"Renewables and waste","target":"Residential","value":"29559"},
+    {"source":"Renewables and waste","target":"Commercial and public services","value":"1485"},
+    {"source":"Renewables and waste","target":"Other","value":"772"},
+    
+    {"source":"Electricity","target":"Industry","value":"34439"},
+    {"source":"Electricity","target":"Transport","value":"1510"},
+    {"source":"Electricity","target":"Residential","value":"21859"},
+    {"source":"Electricity","target":"Commercial and public services","value":"17458"},
+    {"source":"Electricity","target":"Other","value":"6985"},
+
+    {"source":"Heat","target":"Industry","value":"6066"},
+    {"source":"Heat","target":"Transport","value":"0"},
+    {"source":"Heat","target":"Residential","value":"4613"},
+    {"source":"Heat","target":"Commercial and public services","value":"1722"},
+    {"source":"Heat","target":"Other","value":"421"},
+
+    {"source":"Oil products","target":"Industry","value":"12208"},
+    {"source":"Oil products","target":"Transport","value":"110471"},
+    {"source":"Oil products","target":"Residential","value":"8933"},
+    {"source":"Oil products","target":"Commercial and public services","value":"3155"},
+    {"source":"Oil products","target":"Other","value":"33608"}
+   
+    
+    ] ,
+    "nodes": [
+    {"name":"Total Consumption"},
+    {"name":"Industry"},
+    {"name":"Transport"},
+    {"name":"Residential"},
+    {"name":"Commercial and public services"},
+    {"name":"Other"},
+    {"name":"Heat"},
+    {"name":"Electricity"},
+    {"name":"Renewables and waste"},
+    {"name":"Natural gas"},
+    {"name":"Oil products"},
+    {"name":"Crude, NGL and feedstocks"},
+    {"name":"Coal, peat and oil shale"}
+
+    ] }
