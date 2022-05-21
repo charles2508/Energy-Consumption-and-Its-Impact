@@ -1,0 +1,61 @@
+#Line{
+    fill: none;
+    stroke-linejoin: round;
+}
+
+#infographic_2 {
+    display: flex;
+    width: 100%;
+}
+
+#choropleth_detailed_info {
+    margin-top: 100px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#Country {
+    color:darkred;
+	font-size: 20px;
+	line-height: 42px;
+	text-transform: uppercase;
+    margin-right: 35px;
+    padding-right: 55px;
+}
+
+#detailed_info {
+    margin-top: -40px;
+    padding-top: -40px;
+}
+
+h1, h2 {
+    font-weight: 300;
+    font-size: 30px;
+    color: #080808;
+    transition: all 0.4s ease 0s;
+}
+
+h1 {
+    font-size: 50px;
+}
+.node rect {
+    cursor: move;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+  }
+   
+  .node text {
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff;
+  }
+   
+  .link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+  }
+   
+  .link:hover {
+    stroke-opacity: .5;
+  }
+
