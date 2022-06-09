@@ -80,13 +80,13 @@ function regionalEnergyConsumption(groupByYear2019, groupByCountry) {
 
 
     //zoom function
-    svg.call(d3.zoom().scaleExtent([1, 10]).on('zoom', (event) => {
+    svg.call(d3.zoom().scaleExtent([1, 5]).translateExtent([[10, -100],[900, 830]]).on('zoom', (event) => {
         console.log('zoom');
         g.attr('transform', event.transform);
     }))
                       
 //passing data from json file to draw the choropleth
-d3.json("/json/countries.json").then(function(json) {
+d3.json("json/countries.json").then(function(json) {
           //Merge energy consumption data with map data
           //Loop through each consumption data
           for (var i = 0; i < groupByYear2019.length; i++) {

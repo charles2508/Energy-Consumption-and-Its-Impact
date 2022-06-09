@@ -18,7 +18,7 @@ const sankey_title = "Global Energy Flow in 2019"
 
 
 var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-svg.call(d3.zoom().scaleExtent([1, 300]).on('zoom', (event) => {
+svg.call(d3.zoom().scaleExtent([1, 30]).translateExtent([[-10, -50],[800, 500]]).on('zoom', (event) => {
     console.log('zoom');
     g.attr('transform', event.transform);
 }));
@@ -29,7 +29,7 @@ var sankey = d3.sankey()
               .nodePadding(40)
               .size([innerWidth, innerHeight]);
 
-d3.json("/json/sankey.json").then(function(sankeydata) {
+d3.json("json/sankey.json").then(function(sankeydata) {
 graph = sankey(sankeydata);
 console.log(graph.links);
 console.log(graph.nodes);
@@ -43,7 +43,8 @@ var link = g
   .attr("class", "link")
   .attr("d", d3.sankeyLinkHorizontal())
   .style("stroke", function(d) {
-    return (d.color = color(d.source.name.replace(/ .*/, "")));
+    
+    return  color(d.source.name.replace(/ .*/, ""));
   })
   .style("opacity", 12 )
   .attr("stroke-width", function(d) {
